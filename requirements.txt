@@ -9,4 +9,4 @@ requests
 joblib
 deep_translator
 plotly
-
+googletranslator
