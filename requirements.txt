@@ -1,0 +1,10 @@
+streamlit
+streamlit-pills
+pandas
+numpy
+scikit-learn
+sentence-transformers
+google-generativeai
+requests
+joblib
+plotly
