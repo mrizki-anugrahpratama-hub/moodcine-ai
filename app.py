@@ -44,14 +44,14 @@ if GEMINI_API_KEY:
 @st.cache_resource
 def load_resources():
     try:
-        with open("C:/Users/Administrator/Desktop/FP Celerates/MoodCine AI/sentiment_model_tfidf.pkl", "rb") as f:
+        with open("sentiment_model_tfidf.pkl", "rb") as f:
             model = pickle.load(f)
-        with open("C:/Users/Administrator/Desktop/FP Celerates/MoodCine AI/vectorizer.pkl", "rb") as f:
+        with open("vectorizer.pkl", "rb") as f:
             vectorizer = pickle.load(f)
-        movies = pd.read_csv("C:/Users/Administrator/Desktop/FP Celerates/MoodCine AI/processed_movies.csv")
-        with open("C:/Users/Administrator/Desktop/FP Celerates/MoodCine AI/movie_vectorizer.pkl", "rb") as f:
+        movies = pd.read_csv("processed_movies.csv")
+        with open("movie_vectorizer.pkl", "rb") as f:
             movie_tfidf = pickle.load(f)
-        with open("C:/Users/Administrator/Desktop/FP Celerates/MoodCine AI/movie_tfidf_matrix.pkl", "rb") as f:
+        with open("movie_tfidf_matrix.pkl", "rb") as f:
             movie_matrix = pickle.load(f)
         return model, vectorizer, movies, movie_tfidf, movie_matrix
     except FileNotFoundError:
@@ -259,4 +259,5 @@ elif st.session_state.page == 5:
 
     st.markdown("---")
     if st.button("Coba Lagi 🔄", use_container_width=True):
+
         restart()
