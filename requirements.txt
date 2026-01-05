@@ -7,4 +7,5 @@ sentence-transformers
 google-generativeai
 requests
 joblib
+deep-translator
 plotly
